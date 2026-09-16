@@ -33,7 +33,7 @@ Raw transaction-level data is loaded from CSV and rolled up into the `Sales Data
 let
     PBI_Sales = [
 
-    Source = Csv.Document(File.Contents("C:\Users\james\Downloads\PBI_Test supermarket_sales.csv"),[Delimiter=",", Columns=17, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    Source = Csv.Document(File.Contents("C:\Data\supermarket_sales.csv"),[Delimiter=",", Columns=17, Encoding=1252, QuoteStyle=QuoteStyle.None]),
     #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
     #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Invoice ID", type text}, {"Branch", type text}, {"City", type text}, {"Customer type", type text}, {"Gender", type text}, {"Product line", type text}, {"Unit price", type number}, {"Quantity", Int64.Type}, {"Tax 5%", type number}, {"Total", type number}, {"Date", type date}, {"Time", type time}, {"Payment", type text}, {"cogs", type number}, {"gross margin percentage", type number}, {"gross income", type number}, {"Rating", type number}}),
     #"RollupColumns" = Table.AddColumn(#"Changed Type", "Custom", each [
