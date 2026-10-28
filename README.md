@@ -1,6 +1,6 @@
 # Power BI — Supermarket Sales Dashboard
 
-A Power BI report analyzing supermarket sales performance across branches, product lines, payment types, and customer segments. Built as a portfolio piece to demonstrate Power Query (M), DAX, and interactive report design in Power BI.
+A Power BI report analyzing supermarket sales performance across branches, product lines, payment types, and customer segments. Originally built as a take-home assessment for a BI role, then cleaned up as a portfolio piece to demonstrate Power Query (M), DAX, and interactive report design in Power BI.
 
 ![Dashboard](screenshots/dashboard.png)
 
